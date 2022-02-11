@@ -2,13 +2,13 @@ $colors: (1, #ff9800), (2, #e91e63), (3, #009688), (4, #03a9f4), (5, #4caf50);
 
 %setting-sidebar-div {
     width: 90%;
-    height: 70px;
     background-color: #eee;
     @include display(flex, center, flex-start);
     justify-content: center;
     padding: 10px 8px;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    padding: 16px;
 }
 
 %setting-sidebar-div-h2 {
