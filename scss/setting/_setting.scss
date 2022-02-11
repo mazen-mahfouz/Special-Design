@@ -1,0 +1,169 @@
+$colors: (1, #ff9800), (2, #e91e63), (3, #009688), (4, #03a9f4), (5, #4caf50);
+
+%setting-sidebar-div {
+    width: 90%;
+    height: 70px;
+    background-color: #eee;
+    @include display(flex, center, flex-start);
+    justify-content: center;
+    padding: 10px 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+%setting-sidebar-div-h2 {
+    color: #666;
+    font-size: 13.5px;
+    margin-bottom: 5px;
+}
+
+%setting-sidebar-div-div {
+    width: 100%;
+    height: 66%;
+    @include display(flex, center, center);
+    justify-content: center;
+}
+
+%setting-sidebar-div-div-noyes {
+    width: 50px;
+    height: 20px;
+    background-color: var(--them-color);
+    cursor: pointer;
+    @include display(flex, center, center);
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2px;
+    opacity: 0.5;
+}
+
+#setting {
+    @include pos(fixed, 13.5vh, 0);
+    width: 30px;
+    height: 32px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 999999;
+    img {
+        width: 18px;
+        padding: 7px;
+        box-sizing: content-box;
+        cursor: pointer;
+    }
+
+    #setting-sidebar {
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        background-color: white;
+        top: 0;
+        left: -200px;
+        transition: 0.2s;
+        @include display(flex, center, flex-start);
+        justify-content: center;
+        padding-top: 10px;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        border: 1px solid #eee;
+
+        #colorbar {
+            @extend %setting-sidebar-div;
+            h2 {
+                @extend %setting-sidebar-div-h2;
+            }
+
+            #change-color {
+                @extend %setting-sidebar-div-div;
+                @each $id, $color in $colors {
+                    div:nth-child(#{$id}) {
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 100%;
+                        background-color: $color;
+                        margin: 5px;
+                        position: relative;
+                    }
+
+                    .active {
+                        &::after {
+                            content: "";
+                            @include pos-center(absolute);
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 100%;
+                            border: 3px solid white;
+                        }
+                    }
+                }
+            }
+        }
+
+        #backgroundbar {
+            @extend %setting-sidebar-div;
+
+            h2 {
+                @extend %setting-sidebar-div-h2;
+            }
+
+            #change-Background {
+                @extend %setting-sidebar-div-div;
+
+                div {
+                    @extend %setting-sidebar-div-div-noyes;
+                }
+
+                .active {
+                    opacity: 1 !important;
+                }
+            }
+        }
+
+        #bulletsbar {
+            @extend %setting-sidebar-div;
+
+            h2 {
+                @extend %setting-sidebar-div-h2;
+            }
+
+            #change-bullets {
+                @extend %setting-sidebar-div-div;
+
+                div {
+                    @extend %setting-sidebar-div-div-noyes;
+                }
+                .active {
+                    opacity: 1 !important;
+                }
+            }
+        }
+
+        #reset {
+            width: 90%;
+            height: 40px;
+            border-radius: 4px;
+            color: white;
+            background-color: #f44336;
+            cursor: pointer;
+            @include display(flex, center, center);
+            justify-content: center;
+            font-weight: bold;
+        }
+    }
+}
+
+.setting_anime {
+    animation-name: anime;
+    animation: anime 2s infinite linear;
+    @keyframes anime {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+}

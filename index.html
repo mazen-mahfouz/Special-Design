@@ -1,0 +1,305 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="import-all.css">
+    <title>Website</title>
+    <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/> -->
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="logo">Special Design</div>
+        <div id="conn-bar" onclick="sidebar_fun()">
+            <div id="bar"></div>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#skils">Skils</a></li>
+                <li><a href="#gallary">Gallary</a></li>
+                <li><a href="#time-line">Timeline</a></li>
+                <li><a href="#features">Our Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="header">
+        <div id="conn-header">
+            <h1>We Are <span>Creative</span> Agency</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem
+                iste</p>
+        </div>
+    </div>
+
+    <div id="about-us">
+        <div id="about-us-conn">
+            <h1>About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum, tenetur dolores esse magni
+                ratione
+                distinctio! Quod iusto neque fuga, maxime quos nostrum quibusdam dicta deserunt blanditiis non voluptate
+                id?
+            </p>
+        </div>
+
+        <img src="img/about-us.png" alt="about-us">
+    </div>
+
+    <div id="skils">
+        <h1>Skils</h1>
+        <ul>
+            <li>
+                <h2>Html</h2>
+                <div class="skil-1"><span>90%</span></div>
+            </li>
+            <li>
+                <h2>Scss</h2>
+                <div class="skil-2"><span>85%</span></div>
+            </li>
+            <li>
+                <h2>JavaScript</h2>
+                <div class="skil-3"><span>50%</span></div>
+            </li>
+            <li>
+                <h2>Three.Js</h2>
+                <div class="skil-4"><span>80%</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="gallary">
+        <h1>Our Gallery</h1>
+        <img src="img/1.jpg" onclick="view_img(this)" alt="">
+        <img src="img/2.jpg" onclick="view_img(this)" alt="">
+        <img src="img/3.jpg" onclick="view_img(this)" alt="">
+        <img src="img/4.jpg" onclick="view_img(this)" alt="">
+        <img src="img/5.jpg" onclick="view_img(this)" alt="">
+        <img src="img/1.jpg" onclick="view_img(this)" alt="">
+        <img src="img/2.jpg" onclick="view_img(this)" alt="">
+        <img src="img/3.jpg" onclick="view_img(this)" alt="">
+        <img src="img/4.jpg" onclick="view_img(this)" alt="">
+    </div>
+
+    <div id="overlay"></div>
+
+    <div id="img-view">
+        <div id="img-view-conn">
+            <h1>Image 1</h1>
+            <div id="close-img-view" onclick="close_img_view()"></div>
+        </div>
+        <img src="" alt="">
+    </div>
+
+    <div id="time-line">
+        <div id="time-line-bottom">
+            <span>2018</span>
+            <div class="conn-years">
+                <div class="time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+
+                <div class="right time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+            </div>
+
+            <span>2017</span>
+            <div class="conn-years">
+                <div class="right time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+
+                <div class="right time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+
+                <div class="time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+            </div>
+
+            <span>2016</span>
+            <div class="conn-years">
+                <div class="time-line-conn">
+                    <h1>Testing Heading</h1>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quam veniam soluta, recusandae
+                        iure unde? Consectetur, sint porro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="features">
+
+        <h1>Our Features</h1>
+
+        <div>
+            <img src="img/programming.svg">
+            <h4>Development</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+
+        <div>
+            <img src="img/advertising.svg">
+            <h4>Marketing</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+
+        <div>
+            <img src="img/hosting-icon.svg">
+            <h4>Hosting</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+
+        <div>
+            <img src="img/mobile-app.svg">
+            <h4>Mobile Develope</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+
+        <div>
+            <img src="img/graphic-design.svg">
+            <h4>Cloud and Servers</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+
+        <div>
+            <img src="img/web-design.svg">
+            <h4>Seo</h4>
+            <p>We are professional marketeers, we will do anything you imagine in no time.</p>
+        </div>
+    </div>
+
+    <div id="testimonials">
+        <h1>Testimonials</h1>
+        <div>
+            <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+            <h4>Ahmed Mosaad</h4>
+            <h5>CEO At Company</h5>
+        </div>
+
+        <div>
+            <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+            <h4>Ahmed Mosaad</h4>
+            <h5>CEO At Company</h5>
+        </div>
+
+        <div>
+            <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing.</p>
+            <h4>Ahmed Mosaad</h4>
+            <h5>CEO At Company</h5>
+        </div>
+    </div>
+
+    <div id="contact-us">
+        <h1>Contact Us</h1>
+        <form>
+
+            <div id="left">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Phone">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Subject">
+            </div>
+            <div id="right">
+                <textarea placeholder="Your Massage"></textarea>
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
+    <div id="copyright">Created With Love By Gamed.Gamed &#10084;</div>
+
+    <div id="bullets">
+        <ul>
+            <a href="#about-us">
+                <li name="About Us"></li>
+            </a>
+            <a href="#skils">
+                <li name="Skils"></li>
+            </a>
+            <a href="#gallary">
+                <li name="Gallary"></li>
+            </a>
+            <a href="#time-line">
+                <li name="Timeline"></li>
+            </a>
+            <a href="#features">
+                <li name="Features"></li>
+            </a>
+            <a href="#testimonials">
+                <li name="Testimonials"></li>
+            </a>
+            <a href="#contact-us">
+                <li name="Contact Us"></li>
+            </a>
+        </ul>
+    </div>
+
+    <div id="setting">
+        <img src="img/setting.png" onclick="setting_bar()">
+        <div id="setting-sidebar">
+            <div id="colorbar">
+                <h2>Colors</h2>
+                <div id="change-color">
+                    <div data-color="#ff9800" data-count="0"></div>
+                    <div data-color="#e91e63" data-count="1"></div>
+                    <div data-color="#009688" data-count="2"></div>
+                    <div data-color="#03a9f4" data-count="3"></div>
+                    <div data-color="#4caf50" data-count="4"></div>
+                </div>
+            </div>
+            <div id="backgroundbar">
+                <h2>Random Backgrounds</h2>
+                <div id="change-Background">
+                    <div class="active" onclick="change_background(this, 'yes')">Yes</div>
+                    <div onclick="change_background(this, 'no')">No</div>
+                </div>
+            </div>
+
+            <div id="bulletsbar">
+                <h2>Show Bullets</h2>
+                <div id="change-bullets">
+                    <div class="active" onclick="change_bullets(this ,'yes')">Yes</div>
+                    <div onclick="change_bullets(this, 'no')">No</div>
+                </div>
+            </div>
+
+            <div id="reset" onclick="reset()">
+                Reset Options
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

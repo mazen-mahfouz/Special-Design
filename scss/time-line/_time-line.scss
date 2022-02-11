@@ -1,0 +1,107 @@
+#time-line {
+    @extend %flex;
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    padding: 0 var(--padding-nav);
+    position: relative;
+    flex-direction: column;
+
+    #time-line-bottom {
+        margin-top: 30px;
+        @extend %flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &::after {
+        @include before-after();
+        width: 2px;
+        height: 100%;
+        background-color: var(--them-color);
+    }
+
+    span {
+        font-weight: bolder;
+        background-color: var(--them-color);
+        font-size: 16px;
+        padding: 0px 7px;
+        border-radius: 4px;
+    }
+
+    .conn-years {
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        .time-line-conn {
+            width: 100%;
+            background-color: white;
+            text-align: left;
+            padding: 20px 20px 1px 20px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            z-index: 9;
+
+            h1 {
+                font-size: 20.5px;
+                color: var(--them-color);
+                letter-spacing: -1px;
+                margin-bottom: -7px;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    #time-line {
+        .conn-years {
+            .time-line-conn {
+                width: calc(48% - 15px);
+                background-color: white;
+                text-align: left;
+                padding: 20px 5px 1px 20px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                float: left;
+
+                &::before {
+                    @include before-after();
+                    width: 15px;
+                    height: 15px;
+                    background-color: white;
+                    border-radius: 500px;
+                    border: 2px solid var(--them-color);
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                h1 {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        background-color: white;
+                        transform: rotate(45deg);
+                        right: -12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        float: right !important;
+
+        h1::after {
+            left: -28px !important;
+        }
+    }
+}

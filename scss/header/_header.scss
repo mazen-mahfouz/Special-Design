@@ -1,0 +1,35 @@
+#header {
+    @extend %flex;
+    width: 100%;
+    height: 100vh;
+    @include img-pos("1.jpg");
+    padding: 0px var(--padding-nav);
+    margin-bottom: 55px;
+
+    &::before {
+        @include before-after();
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.6);
+    }
+
+    #conn-header {
+        z-index: 999;
+        text-align: center;
+
+        h1 {
+            font-size: clamp(25.5px, 5vw, 32px);
+            letter-spacing: -0.5;
+            transform: translateY(12px);
+
+            span {
+                color: var(--them-color);
+            }
+        }
+
+        p {
+            font-size: clamp(19px, 4vw, 21px);
+            line-height: 1.7;
+        }
+    }
+}

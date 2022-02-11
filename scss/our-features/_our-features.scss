@@ -1,0 +1,50 @@
+#features {
+    @extend %div_style;
+    padding: 70px 6% 50px 6%;
+    display: block;
+    h1 {
+        @extend %title_style;
+        margin-bottom: 60px;
+    }
+
+    div {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 60px;
+        display: inline-block;
+        width: 95%;
+        img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        h4 {
+            color: black;
+            font-size: 24px;
+            position: relative;
+            &::before {
+                @include pos-center(absolute);
+                content: "";
+                background-color: var(--them-color);
+                width: 40px;
+                height: 4px;
+                margin-top: 20px;
+                top: 20px;
+            }
+        }
+
+        p {
+            color: #767676;
+            line-height: 1.7;
+            font-size: 17px;
+            margin: auto;
+            margin-top: 30px;
+            width: 85%;
+        }
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    #features div {
+        width: 30%;
+    }
+}

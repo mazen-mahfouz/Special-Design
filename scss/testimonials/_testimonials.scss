@@ -1,0 +1,73 @@
+#testimonials {
+    width: 100%;
+    background-color: var(--them-color);
+    position: relative;
+    display: block;
+    padding: 70px 3% 60px 3%;
+    text-align: center;
+    @extend %div_style;
+    z-index: -10;
+
+    h1 {
+        @extend %title_style;
+        color: white;
+        justify-self: left;
+    }
+
+    div {
+        width: 100%;
+        background-color: white;
+        padding: 15px 20px;
+        margin-top: -10px;
+        display: inline-block;
+        z-index: 99;
+        margin-bottom: 20px;
+
+        p {
+            font-size: 16px;
+            font-style: italic;
+            color: #707070;
+            line-height: 1.4;
+            text-align: left;
+            width: 90%;
+        }
+
+        h4 {
+            font-size: 17px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            color: #707070;
+            font-size: 16px;
+            font-weight: 100;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #333;
+        z-index: -10;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    #testimonials {
+        padding: 70px 10% 60px 10%;
+        text-align: left;
+        div {
+            width: 32%;
+            margin-left: 6px;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+}

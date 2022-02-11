@@ -1,0 +1,82 @@
+#nav {
+    @include pos(absolute, 0, 0);
+    width: 100%;
+    z-index: 9999;
+    padding: 25px var(--padding-nav) 0 calc(var(--padding-nav) + 20px);
+    @extend %flex;
+    justify-content: space-between;
+
+    #logo {
+        font-size: 18px;
+        color: white;
+    }
+
+    #conn-bar {
+        padding: 10px;
+        z-index: 999999;
+        #bar {
+            @extend %bar_style;
+            transition: unset;
+            position: relative;
+
+            &::after {
+                @include before-after();
+                @extend %bar_style;
+                top: -8px;
+            }
+
+            &::before {
+                @include before-after();
+                @extend %bar_style;
+                top: 8px;
+            }
+        }
+    }
+
+    #sidebar {
+        z-index: 9999;
+        @extend %flex;
+        transition: 0.5s;
+
+        li {
+            & a:hover {
+                color: var(--them-color);
+            }
+        }
+    }
+}
+
+@mixin sidebar-respons($num-width) {
+    @if $num-width == true {
+        #sidebar {
+            width: 90%;
+            height: 100vh;
+            @include pos(fixed, 0, 0);
+            background-color: rgb(0, 0, 0, 0.9);
+            text-align: center;
+            left: 100%;
+
+            li {
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+        }
+    } @else {
+        #sidebar li {
+            padding: 0 15px;
+            float: left;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    @include sidebar-respons(true);
+}
+
+@media screen and (min-width: 1024px) {
+    @include sidebar-respons(false);
+
+    #bar {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+#about-us {
+    @extend %div_style;
+    grid-template-rows: auto auto;
+
+    #about-us-conn {
+        h1 {
+            @extend %title_style;
+        }
+
+        p {
+            color: #767676;
+            line-height: 1.7;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+    }
+
+    img {
+        width: 72%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #about-us {
+        grid-template-columns: 54% auto;
+        grid-template-rows: auto;
+        text-align: left;
+        justify-items: end;
+
+        p {
+            width: 82%;
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+}

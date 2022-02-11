@@ -1,0 +1,57 @@
+
+
+*{
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+
+body{
+    @extend %margANDpadd;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+ul{
+    @extend %margANDpadd;
+    list-style: none;
+}
+
+a{
+    text-decoration: none; 
+    color: white;
+}
+
+button{
+    background: none;
+    border:0;
+}
+
+%margANDpadd{
+    margin: 0;
+    padding: 0;
+}
+
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@for $i from 1 through 6 {
+    h#{$i}{
+        @extend %margANDpadd;
+        font-weight: bolder;
+    }
+}
+
+div, span{
+    clear: both;
+}
+
+input:focus {
+    outline: none;
+}
+  
+button:focus {
+    outline: none;
+}

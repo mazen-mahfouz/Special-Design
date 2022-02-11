@@ -1,0 +1,85 @@
+#skils {
+    @extend %div_style;
+    background-color: #eee;
+    display: block;
+    h1 {
+        @extend %title_style;
+    }
+
+    li {
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-top: 0px;
+        margin-bottom: 35px;
+        background-color: white;
+        padding: 25px 12px;
+
+        h2 {
+            font-size: 17px;
+            color: #272727;
+            margin: auto;
+        }
+
+        div {
+            width: 100%;
+            height: 35px;
+            border-radius: 4px;
+            background-color: #f1eeee;
+            position: relative;
+            overflow: hidden;
+            @extend %flex;
+
+            span {
+                color: #60606087;
+                position: absolute;
+                right: 14px;
+                font-weight: bolder;
+                font-size: 14px;
+                z-index: 9999;
+            }
+        }
+    }
+}
+
+$num_skils: (
+    1: 90%,
+    2: 85%,
+    3: 50%,
+    4: 80%,
+);
+
+@each $i, $num in $num_skils {
+    .skil-#{$i}::after {
+        @include before-after();
+        @include pos(absolute, 0, 0);
+        background-color: var(--them-color);
+        height: 100%;
+        width: 0px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #skils {
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #skils {
+        li {
+            div {
+                width: 90%;
+            }
+        }
+    }
+}

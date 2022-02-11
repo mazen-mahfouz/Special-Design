@@ -1,0 +1,78 @@
+#gallary {
+    display: block;
+    @extend %div_style;
+
+    h1 {
+        @extend %title_style;
+    }
+
+    img {
+        width: 240px;
+        border: 2px solid var(--them-color);
+        padding: 3px;
+        margin-bottom: 6px;
+        opacity: 0.7;
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+#img-view {
+    @include pos-center(fixed);
+    width: 90%;
+    padding-bottom: 8px;
+    z-index: 9999999;
+    background-color: white;
+    text-align: center;
+    display: none;
+
+    #img-view-conn {
+        @include display(grid, center, center);
+        grid-template-columns: 0.9fr 1fr 1fr;
+        padding: 6px 8px 9px 0;
+
+        h1 {
+            grid-column-start: 2;
+            @extend %title_style;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        #close-img-view {
+            width: 24px;
+            height: 24px;
+            background-color: var(--them-color);
+            @extend %flex;
+            justify-self: flex-end;
+
+            &::after {
+                @include before-after();
+                @include close-view-img(45deg);
+            }
+
+            &::before {
+                @include before-after();
+                @include close-view-img(-45deg);
+            }
+        }
+    }
+
+    img {
+        width: 96%;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #gallary img {
+        // width: 300px;
+        margin-left: 6px;
+    }
+
+    #img-view {
+        width: 40%;
+    }
+}
