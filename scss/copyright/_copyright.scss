@@ -5,4 +5,5 @@
     color: white;
     justify-content: center;
     @include display(flex, center, center);
+    text-align: center;
 }
