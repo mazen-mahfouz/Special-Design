@@ -5,6 +5,7 @@
     @include img-pos("1.jpg");
     padding: 0px var(--padding-nav);
     margin-bottom: 55px;
+    position: relative;
 
     &::before {
         @include before-after();
